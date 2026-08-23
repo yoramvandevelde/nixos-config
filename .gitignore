@@ -1,0 +1,11 @@
+# vim
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# nix build results
+result
+result-*
