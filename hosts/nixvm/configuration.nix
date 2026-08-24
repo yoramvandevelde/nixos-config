@@ -26,7 +26,7 @@
     settings.PasswordAuthentication = false;
   };
 
-  environment.systemPackages = with pkgs; [ git vim curl ];
-
+  environment.systemPackages = with pkgs; [ git vim curl htop nvim ];
+  
   system.stateVersion = "26.05";
 }
