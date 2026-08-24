@@ -7,7 +7,10 @@
 
   outputs = { self, nixpkgs, ... }: {
     nixosConfigurations.nixvm = nixpkgs.lib.nixosSystem {
-      modules = [ ./hosts/nixvm/configuration.nix ];
+      modules = [
+        ./hosts/nixvm/configuration.nix
+        { system.configurationRevision = self.rev or self.dirtyRev or "dirty"; }
+      ];
     };
   };
 }
