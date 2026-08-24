@@ -26,6 +26,12 @@
     settings.PasswordAuthentication = false;
   };
 
+  environment.shellAliases = {
+    rebuild = "sudo nixos-rebuild switch --flake /home/yoram/nixos-config#nixvm";
+    try = "sudo nixos-rebuild test --flake /home/yoram/nixos-config#nixvm";
+    generations = "sudo nixos-rebuild list-generations";
+  };
+
   environment.systemPackages = with pkgs; [ git vim curl htop neovim ]; 
  
   system.stateVersion = "26.05";
