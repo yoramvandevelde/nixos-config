@@ -26,7 +26,7 @@
     settings.PasswordAuthentication = false;
   };
 
-  environment.systemPackages = with pkgs; [ git vim curl htop nvim ];
-  
+  environment.systemPackages = with pkgs; [ git vim curl htop neovim ]; 
+ 
   system.stateVersion = "26.05";
 }
